@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Sriracha&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2.4vw;
+    
+    
+}
+header h1 {
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Passion One', cursive;
+    font-size: 10vw;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 3.5vw;
+    
+}
+header a:hover {
+    text-decoration: underline;
+}
+section {
+    padding: 20px 0px 20px 40px;
+    display: block;
+    line-height: 2em;
+    font-family: 'Sriracha', cursive;
+    font-size: 3.5vw;
+}
+section p {
+    padding-left: 5px;
+
+}
+
+
+section.text2{
+    background-position: right center;
+    background-image: url('imagens-cordel/background001.jpg');
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+}
+section.text2 p {
+    background-position: absolute;
+    background-color: rgba(0, 0, 0, 0.329);
+    text-align: left center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.643);
+}
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration: underline;
+
+}
+section.imagem2 {
+    background-color: black;
+    background-image: url('imagens-cordel/background002.jpg');
+    background-repeat: none;
+    background-attachment: fixed;
+    background-position: left center;
+
+
+}
+section.imagem2 p {
+    background-color: rgba(0, 0, 0, 0.403);
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.643);
+}
+footer {
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, serif;
+}
