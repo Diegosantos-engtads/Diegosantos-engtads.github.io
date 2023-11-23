@@ -81,9 +81,10 @@ footer a:hover {
 section.imagem2 {
     background-color: black;
     background-image: url('imagens-cordel/background002.jpg');
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left center;
+    background-size: cover;
 
 
 }
@@ -96,6 +97,6 @@ section.imagem2 p {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.643);
 }
 footer {
-    font-size: 1em;
+    font-size: 1.2vw;
     font-family: Verdana, Geneva, Tahoma, serif;
 }
