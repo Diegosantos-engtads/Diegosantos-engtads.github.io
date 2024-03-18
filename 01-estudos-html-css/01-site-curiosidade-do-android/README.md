@@ -11,4 +11,3 @@
 
 
 [![site](https://img.shields.io/website?label=Site_Curiosidades_do_Android&style=for-the-badge&url=https://https://diegosantos-engtads.github.io/01-estudos-html-css/01-site-curiosidade-do-android/android.html)](https://diegosantos-engtads.github.io/01-estudos-html-css/01-site-curiosidade-do-android/android.html)
-gfdgdfgfdgdfgdfgfdgdfgdfgfdgdfgdfgdfgd
