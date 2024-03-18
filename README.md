@@ -6,7 +6,6 @@
 ✔️ HTML
 ✔️ CSS
 ✔️ JavaScript
-<br></br>
 #
 <h3>Links dos Repositórios</h3>
 
