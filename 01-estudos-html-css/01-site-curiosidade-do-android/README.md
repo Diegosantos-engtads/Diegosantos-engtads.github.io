@@ -1,7 +1,5 @@
 # Meus Estudos - diegosantos-engtads.github.io
 
-| [**Site - Cordel Moderno**](https://diegosantos-engtads.github.io/01-estudos-html-css/03-site-cordel/index.html) |
+| [**Trabalho 1**](https://diegosantos-engtads.github.io/01-estudos-html-css/01-site-curiosidade-do-android/android.html) |
 |:---:|
-| [![cordel-moderno](https://diegosantos-engtads.github.io/01-estudos-html-css/03-site-cordel/imagens-cordel/background001.jpg)](https://diegosantos-engtads.github.io/01-estudos-html-css/03-site-cordel/index.html) |
-
-
+| [![Trabalho 1](https://diegosantos-engtads.github.io/01-estudos-html-css/01-site-curiosidade-do-android/imagens/dan-droids.png)](https://diegosantos-engtads.github.io/01-estudos-html-css/01-site-curiosidade-do-android/android.html) |
