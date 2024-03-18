@@ -1,3 +1,4 @@
+body {
 # Meus Estudos - diegosantos-engtads.github.io
 
 | Trabalho 1 | Trabalho 2 | Trabalho 3 |
@@ -11,3 +12,4 @@
 | Trabalho 7 |
 |------------|
 | ![Caixa Vazia](https://via.placeholder.com/600x300.png?text=Trabalho+7) |
+}
