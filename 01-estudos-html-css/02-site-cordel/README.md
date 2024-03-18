@@ -9,4 +9,4 @@
 #
 <h3>Link do Site</h3>
 
-[![site](https://img.shields.io/website?label=Site_Cordel_Moderno&style=for-the-badge&url=https://https://diegosantos-engtads.github.io/01-estudos-html-css/03-site-cordel/index.html)](https://diegosantos-engtads.github.io/01-estudos-html-css/03-site-cordel/index.html)
+[![site](https://img.shields.io/website?label=Site_Cordel_Moderno&style=for-the-badge&url=https://https://diegosantos-engtads.github.io/01-estudos-html-css/02-site-cordel/index.html)](https://diegosantos-engtads.github.io/01-estudos-html-css/02-site-cordel/index.html)
