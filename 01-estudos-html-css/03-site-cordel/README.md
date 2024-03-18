@@ -1,4 +1,4 @@
-<h2>Meus Estudos</h2>
+<h2>Meus Estudos - Site Cordel</h2>
 
 
 <h4>Este projeto foi desenvolvido com as seguintes tecnologias:</h4>
