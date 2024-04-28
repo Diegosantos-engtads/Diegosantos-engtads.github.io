@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cliente</title>
+    <!-- Inclua a biblioteca Inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(to right, rgb(173, 173, 255), darkblue);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    form {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        color: white;
+        border-radius: 15px;
+        width: 20%;
+    }
+    fieldset {
+        border: 3px solid dodgerblue;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    legend {
+        border: 1px solid dodgerblue;
+        padding: 10px;
+        text-align: center;
+        background-color: dodgerblue;
+        border-radius: 8px; 
+    }
+    div {
+        position: relative;
+        margin-bottom: 10px;
+        line-height: 2.5em;
+    }
+    input {
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        color: white;
+        letter-spacing: 2px;
+        width: 100%;
+        font-size: large;
+        transition: border-bottom 0.5s ease;
+    }
+    input:not(#masculine, #feminine):focus ~ label,
+    input:not(#masculine, #feminine):valid ~ label,
+    input:not(#masculine, #feminine):hover ~ label {
+        top: -20px;
+        font-size: 0.8em;
+    }
+    
+
+    label {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        pointer-events: none;
+        transition: .5s;
+        font-size: 1em;
+    }
+
+    .labelInput {
+        position: relative;
+    }
+
+    #date {
+        background-color: white;
+        color: black;
+        font-size: large;
+        border-radius: 8px;
+        padding: 5px;
+        width: auto;
+    }
+
+    #feminine, #masculine {
+        width: auto;
+        
+        
+    }
+    
+
+    button {
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: large;
+    }
+</style>
+<body>
+    <form action="config.php" method="post">
+        <fieldset>
+            <legend><b>Formulário de Cliente</b></legend>
+
+            <div>
+                <input type="text" name="name" id="name" maxlength="30" required>
+                <label for="name">Nome Completo</label>
+            </div>
+
+            <div>
+                <input type="text" name="cpf" id="cpf" required>
+                <label for="cpf">CPF</label>
+            </div>
+
+            <div>
+                <input type="email" name="email" id="email" required>
+                <label for="email">E-mail</label>
+            </div>
+
+            <div>
+                <input type="tel" name="telefon" id="telefon" required>
+                <label for="telefon">Telefone</label>
+            </div>
+
+            <div>
+                <input type="text" name="cep" id="cep" required>
+                <label for="cep">CEP</label>
+            </div>
+
+            <div class="labelInput">
+                <label>Sexo:</label><br>
+                <input type="radio" name="gender" id="masculine" checked required>
+                <label for="masculine" class="labelInput">Homem</label><br>
+                <input type="radio" name="gender" id="feminine" required>
+                <label for="feminine" class="labelInput">Feminino</label>
+            </div>
+
+            <div class="labelInput">
+                <label for="date" class="labelInput">Data de Nascimento:</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+
+            <div>
+                <input type="text" name="city" id="city" required maxlength="30">
+                <label for="city">Cidade</label>
+            </div>
+
+            <div>
+                <input type="text" name="state" id="state" required maxlength="30">
+                <label for="state">Estado</label>
+            </div>
+
+            <div>
+                <input type="text" name="address" id="address" required>
+                <label for="address">Endereço</label>
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        // Aplica a máscara de CPF usando a biblioteca Inputmask
+        $(document).ready(function(){
+            $('#cpf').inputmask('999.999.999-99');
+        });
+
+        // Aplica a máscara de telefone usando a biblioteca Inputmask
+        $(document).ready(function(){
+            $('#telefon').inputmask('(99) 99999-9999');
+        });
+
+        // Aplica a máscara de CEP usando a biblioteca Inputmask
+        $(document).ready(function(){
+            $('#cep').inputmask('99999-999');
+        });
+
+        // Preenche automaticamente o endereço, cidade e estado ao preencher o CEP
+        $('#cep').blur(function(){
+            var cep = $(this).val().replace(/\D/g, '');
+            if (cep.length == 8) {
+                $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function(data) {
+                    if (!("erro" in data)) {
+                        $('#city').val(data.localidade);
+                        $('#state').val(data.uf);
+                        $('#address').val(data.logradouro);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
